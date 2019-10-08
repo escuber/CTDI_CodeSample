@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CTDI_Food.ApiController
 {
-    [Route("api/[controller]")]
+    [Route("api/catalog")]
     [ApiController]
     public class catalogController : ControllerBase
     {

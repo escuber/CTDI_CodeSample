@@ -13,6 +13,7 @@ Then to run the project:
                     to build type: dotnet build
                     to run the project type: dotnet run 
 
+Then bring up the project in your browser: localhost:8099
 
 
 This was developed to run on port 8099.  If this port is not good for your machine

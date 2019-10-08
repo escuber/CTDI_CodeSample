@@ -7,8 +7,7 @@ namespace CTDI_Food.data.bo
     using System;
     using System.Collections.Generic;    
     using CTDI_Food.data.models;
-    using System;
-    using System.Collections.Generic;
+
     using System.Linq;
     
     //
@@ -39,12 +38,12 @@ namespace CTDI_Food.data.bo
                 _db.product.AddRange(ProductDataGenerator.generateProductsDataList());
                 _db.SaveChanges();
             }
-            // here we are going to generate the output query twice becasue it gets 
+            // here we are going to generate the output query twice because it gets 
             // really ugly and hard to read otherwise
             // the first time we are setting the discountpercent and the second time we 
             // we are using the value to set the price.
 
-            //  the good thing is that is only happens once becasue of the query it is writting
+            //  the good thing is that is only happens once because of the query it is writting
 
             var return_products = _db.product.Select(p => new catalog
             {

@@ -15109,11 +15109,11 @@
   "project": {
     "version": "2.5.3",
     "restore": {
-      "projectUniqueName": "f:\\devlab\\TestStudio\\CTDI_Food\\CTDI_FoodVC\\CTDI_Food.csproj",
+      "projectUniqueName": "F:\\devlab\\TestStudio\\CTDI_CodeSample\\CTDI_Food.csproj",
       "projectName": "CTDI_Food",
-      "projectPath": "f:\\devlab\\TestStudio\\CTDI_Food\\CTDI_FoodVC\\CTDI_Food.csproj",
+      "projectPath": "F:\\devlab\\TestStudio\\CTDI_CodeSample\\CTDI_Food.csproj",
       "packagesPath": "C:\\Users\\Jimg\\.nuget\\packages\\",
-      "outputPath": "f:\\devlab\\TestStudio\\CTDI_Food\\CTDI_FoodVC\\obj\\",
+      "outputPath": "F:\\devlab\\TestStudio\\CTDI_CodeSample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

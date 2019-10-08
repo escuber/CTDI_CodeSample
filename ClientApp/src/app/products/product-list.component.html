@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <div class="col m6">
+      <h5>Food While You Wait</h5>
+
+    </div>
+    <div class="col m2">Filter by:</div>
+    <div class="col m4">
+      <input type="text" #box (keyup)="onKey(box.value)" />
+    </div>
+  </div>
+  <div class="row" *ngIf="listFilter">
+    <div class="col m6">
+      <h3>Filtered by: {{ listFilter }}</h3>
+    </div>
+  </div>
+  <div class="row " *ngIf=" style == 'style:list'">
+    <table class="table" *ngIf="products && products.length">
+      <thead>
+        <tr>
+            <th></th>
+          <th>Product</th>
+
+          <th>Price</th>
+          <th>Discount</th>
+          <th>Today's Price </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products | productFilter: listFilter">
+          <td>
+            <img
+              height="35"
+              width="35"
+              src="assets/products/{{ product.imageName }}"
+              onError="this.src='assets/products/noImage.png'"
+            />
+          </td>
+          <td>
+            {{ product.productName }}
+          </td>
+          <td>{{ product.productPrice | currency: "USD":true:"1.2-2" }}</td>
+          <td>{{ product.discountPercent| percent }}</td>
+          <td>{{ product.finalPrice | currency: "USD":true:"1.2-2" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row " *ngIf="products && products.length && style != 'style:list'">
+    <div
+      class="box col xs12 s12 l3"
+      *ngFor="let product of products | productFilter: listFilter"
+    >
+      <div class="card large">
+        <span class="card-title blue-text text-darken-2"
+          ><H3>{{ product.productName }}</H3></span
+        >
+        <div class="card-image">
+          <img
+            height="230"
+            width="230"
+            src="assets/products/{{ product.imageName }}"
+            onError="this.src='assets/products/noImage.png'"
+          />
+        </div>
+
+        <div class="card-content">
+          <p class="">{{ product.productDescription }}</p>
+        </div>
+
+        <div class="card-footer">
+          <div class="row ">
+            <div class="box col l2"></div>
+            <div class="box col s12 m12 l10">
+              <table class="pull-right right-align">
+                <tbody>
+                  <tr *ngIf="product.discountPercent > 0">
+                    <td class="right-align">Regular Price:</td>
+                    <td class="right-align">
+                      {{ product.productPrice | currency: "USD":true:"1.2-2" }}
+                    </td>
+                  </tr>
+                  <tr *ngIf="product.discountPercent > 0">
+                    <td class="right-align">Discount:</td>
+                    <td class="right-align">
+                      {{ product.discountPercent | percent }}
+                    </td>
+                  </tr>
+                  <tr class="right-align">
+                    <td class="right-align total"><B>Todays Price:</B></td>
+                    <td class="right-align total">
+                      <B>{{
+                        product.finalPrice | currency: "USD":true:"1.2-2"
+                      }}</B>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

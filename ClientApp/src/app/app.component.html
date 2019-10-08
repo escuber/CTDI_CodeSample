@@ -1,0 +1,25 @@
+
+    <header>
+        <nav class="nav-wrapper #0d47a1 blue darken-4 ">
+          <div class="container">
+            <a href="" class='brand-logo'><img src="../assets/img/ctdi-logo.png">
+              </a>
+            <a href="" class='sidenav-trigger' data-target="mobile-menu">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li> <a [routerLink]="['/products','style:tile']"><i class="material-icons">apps</i> </a></li>
+              <li> <a [routerLink]="['/products','style:list']"><i class="material-icons">list</i> </a></li>
+            </ul>
+            <ul class="sidenav grey lighten-2" id="mobile-menu">
+              <li> <a [routerLink]="['/products','style:list']"><i class="material-icons">list</i>list </a></li>
+              <li> <a [routerLink]="['/products','style:tile']"class=""><i class="material-icons">apps</i>cards </a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+  <main>
+
+  <router-outlet  style="margin-top: 80px;"></router-outlet>
+  </main>

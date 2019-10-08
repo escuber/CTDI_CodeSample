@@ -1,0 +1,32 @@
+{
+  "@odata.context": "http://192.168.1.146/odata/$metadata#product",
+  "value": [
+      {
+          "productId": 1,
+          "productName": "Pickel",
+          "productDescription": "its a pickle what more do you need to know?",
+          "productPrice": 24.99,
+          "imageName": "3412.png",
+          "discountPercent": 0.5,
+          "finalPrice": 12.49
+      },
+      {
+          "productId": 3,
+          "productName": "Grapes",
+          "productDescription": "You know people say after you these you will feel just grape.",
+          "productPrice": 75.99,
+          "imageName": "3405.png",
+          "discountPercent": 0.5,
+          "finalPrice": 37.99
+      },
+      {
+          "productId": 2,
+          "productName": "Pear",
+          "productDescription": "Sometimes there is nothing better than a good pear.  Our pears are awesome",
+          "productPrice": 5.99,
+          "imageName": "3457.png",
+          "discountPercent": 0,
+          "finalPrice": 5.99
+      }
+  ]
+}

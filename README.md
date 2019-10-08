@@ -28,3 +28,13 @@ why it made the most sense was because of the dependency injection built into th
 utilized I did not create a simple mock datasource.  I used a full entity framework data context.  The reason I did this is 
 because the data provider can now be changed to sql or oracle without the need to change any logic.  I think that is very
 cool.
+
+The server side is a rest api that returns the catalog to the client using a business object that reads the raw data through 
+an in-memory dataContext.
+
+If you have any questions please contact me.  
+Jim Gaudette
+text 612-382-9085 
+email jimgaudette@gmail.com
+
+Thank you
